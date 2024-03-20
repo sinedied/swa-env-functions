@@ -1,0 +1,11 @@
+Function call result:
+
+<p id="js"></p>
+<script>
+  async function testApi() {
+    const response = await fetch('api/hello');
+    const data = await response.text();
+    document.getElementById('js').innerHTML = data;
+  }
+  testApi();
+</script>
