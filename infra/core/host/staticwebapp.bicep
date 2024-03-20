@@ -15,12 +15,9 @@ resource web 'Microsoft.Web/staticSites@2023-01-01' = {
   sku: sku
   properties: {
     provider: 'Custom'
-    appSettings: {
-      HELLO_NAME: 'app settings'
-    }
   }
 
-  resource appSettings 'appSettings' = {
+  resource appSettings 'config' = {
     name: 'appsettings'
     properties: {
       HELLO_NAME: 'app settings'
